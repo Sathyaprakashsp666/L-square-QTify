@@ -1,6 +1,15 @@
 .wrapper {
     width: 159px;
     min-height: 205px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.wrapper img {
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 
@@ -11,12 +20,13 @@
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 
+
 }
 
 .follows_btn {
     margin: 10px;
     display: inline-flex;
-    padding: 4px 8px;
+    padding: 4px 10px;
     align-items: flex-start;
     gap: 1px;
     border-radius: 10px;
