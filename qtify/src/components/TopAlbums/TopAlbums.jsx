@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./TopAlbum.module.css";
 import axios from "axios";
 import Card from "../Card/Card";
+import Tooltip from "@mui/material/Tooltip"; // Import Tooltip
 
 function TopAlbums() {
   const [topAlbums, setTopAlbums] = useState([]);
@@ -30,7 +31,19 @@ function TopAlbums() {
       </div>
       <div className={styles.top_album_cont}>
         {topAlbums.map((item) => {
-          return <Card {...item} key={item.id} />;
+          // console.log(item.songs.length);
+          return (
+            <Tooltip
+              key={item.id}
+              title={`${item.songs?.length} songs`}
+              placement="top"
+              arrow
+            >
+              <div>
+                <Card {...item} />
+              </div>
+            </Tooltip>
+          );
         })}
       </div>
     </>
